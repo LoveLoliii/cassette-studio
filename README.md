@@ -23,6 +23,8 @@ Windows 10/11、.NET 8 SDK、Python 3.10+，以及加入 PATH 的 FFmpeg / FFpro
 
 ## 快速开始
 
+如果不需要修改源码，可到 [Releases](https://github.com/LoveLoliii/cassette-studio/releases) 下载 Windows x64 便携包，完整解压后运行 CassetteStudio.exe。界面自带 .NET 运行时；构建 Mod 仍需安装 .NET 8 SDK、Python 和 FFmpeg，并选择本机游戏目录。
+
 ```powershell
 git clone https://github.com/LoveLoliii/cassette-studio.git
 cd cassette-studio
@@ -66,6 +68,8 @@ dotnet run --project tests/ScheduleChecks.csproj -c Release
 ```
 
 这些检查不登录 Steam、不上传内容、不修改真实游戏目录，安装测试使用临时目录。GitHub Actions 在 Windows 上执行基础检查。
+
+维护者可运行 `./tools/package_release.ps1 -Version 0.1.0` 生成自带 .NET 运行时的 Windows x64 便携 ZIP 和 SHA256 校验文件。发布包只复制工具运行所需模板与公开演示工程，不包含个人工程或商业音乐。
 
 ## 结构
 
