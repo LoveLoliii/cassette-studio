@@ -1,0 +1,37 @@
+.tools/
+.inspection/
+**/bin/
+**/obj/
+dist/
+*.user
+.build/
+.cache/
+**/__pycache__/
+**/.workshop/
+
+# Personal music projects and historical development files
+packs/*/
+!packs/demo/
+package/
+songs/
+assets/source/
+assets/ART_DIRECTION.md
+assets/FFXIV_ART_DIRECTION.md
+
+# User-provided media and game/runtime binaries are never published
+*.ogg
+*.wav
+*.mp3
+*.flac
+*.m4a
+*.dll
+*.exe
+*.pdb
+*.zip
+steamcmd.json
+*.vdf
+packs/demo/artwork/
+tools/generate_test_audio.py
+tools/import_songs.py
+tools/migrate_sample_pack.py
+tools/normalize_songs.py

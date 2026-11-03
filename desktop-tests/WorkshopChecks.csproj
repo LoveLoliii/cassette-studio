@@ -1,0 +1,8 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType><TargetFramework>net8.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF><Nullable>enable</Nullable><ImplicitUsings>enable</ImplicitUsings>
+    <StartupObject>WorkshopChecks.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup><Compile Include="../desktop/*.cs" Link="Desktop/%(Filename)%(Extension)" /></ItemGroup>
+</Project>

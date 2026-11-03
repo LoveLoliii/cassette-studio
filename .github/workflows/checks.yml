@@ -1,0 +1,25 @@
+name: Checks
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  checks:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Prepare original demo assets
+        run: python tools/create_demo_pack.py
+      - name: Build desktop app
+        run: dotnet build desktop/CassetteStudio.csproj -c Release
+      - name: Workshop configuration checks
+        run: dotnet run --project desktop-tests/WorkshopChecks.csproj -c Release
+      - name: Builder and installation checks
+        run: python -m unittest discover -s builder -p test_builder.py -v
+      - name: Delivery schedule checks
+        run: dotnet run --project tests/ScheduleChecks.csproj -c Release

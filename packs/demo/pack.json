@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "cassette_studio_demo",
+  "name": "磁带工作室 · 演示包",
+  "author": "Cassette Studio",
+  "version": "1.0.0",
+  "description": "包含两盘原创测试旋律的演示磁带包。",
+  "gameVersion": "0.46D",
+  "receiptKey": "demo_gift_v1",
+  "deliveryDelayDays": 1,
+  "giftName": "水晶音乐礼盒",
+  "giftDescription": "打开礼盒，取出两盘测试磁带放入播放器。",
+  "artwork": "artwork/gift_box.png",
+  "normalize": true,
+  "targetLufs": -18,
+  "tracks": [
+    { "key": "01", "title": "01 · 原创测试旋律 A", "titleEn": "Original Demo A", "description": "用于验证磁带播放的短旋律。", "audio": "audio/demo_01.wav", "sprite": "cassette1" },
+    { "key": "02", "title": "02 · 原创测试旋律 B", "titleEn": "Original Demo B", "description": "用于验证切歌的短旋律。", "audio": "audio/demo_02.wav", "sprite": "cassette10" }
+  ],
+  "workshop": {
+    "publishedFileId": "0",
+    "title": "",
+    "description": "",
+    "preview": "",
+    "visibility": 2,
+    "changeNote": "首次发布"
+  }
+}
